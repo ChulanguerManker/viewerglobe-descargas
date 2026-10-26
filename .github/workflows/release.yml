@@ -1,0 +1,25 @@
+# Crea (o actualiza) la Release de GitHub cada vez que se sube un instalador nuevo
+name: Publicar instalador
+on:
+  push:
+    paths: ['ViewerGlobe-Setup-*.exe', 'RELEASE_NOTES.md']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publicar Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FILE=$(ls -1 ViewerGlobe-Setup-*.exe | sort -V | tail -1)
+          VER=$(echo "$FILE" | sed -E 's/ViewerGlobe-Setup-(.*)\.exe/\1/')
+          if gh release view "v$VER" >/dev/null 2>&1; then
+            gh release upload "v$VER" "$FILE" --clobber
+            gh release edit "v$VER" --notes-file RELEASE_NOTES.md --latest
+          else
+            gh release create "v$VER" "$FILE" --title "ViewerGlobe v$VER" --notes-file RELEASE_NOTES.md --latest
+          fi
