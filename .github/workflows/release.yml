@@ -18,8 +18,17 @@ jobs:
           FILE=$(ls -1 ViewerGlobe-Setup-*.exe | sort -V | tail -1)
           VER=$(echo "$FILE" | sed -E 's/ViewerGlobe-Setup-(.*)\.exe/\1/')
           if gh release view "v$VER" >/dev/null 2>&1; then
-            gh release upload "v$VER" "$FILE" --clobber
-            gh release edit "v$VER" --notes-file RELEASE_NOTES.md --latest
+            # solo vuelve a subir el instalador si ha cambiado (así no se pierde el contador de descargas)
+            OLD=$(gh release view "v$VER" --json assets --jq ".assets[] | select(.name==\"$FILE\") | .size")
+            if [ "$OLD" != "$(stat -c %s "$FILE")" ]; then gh release upload "v$VER" "$FILE" --clobber; fi
+            gh release edit "v$VER" --notes-file RELEASE_NOTES.md --draft=false --latest
           else
             gh release create "v$VER" "$FILE" --title "ViewerGlobe v$VER" --notes-file RELEASE_NOTES.md --latest
           fi
+          # Versiones más nuevas que la del repo quedan reservadas como borrador (ocultas al público)
+          for TAG in $(gh release list --limit 50 --json tagName --jq '.[].tagName'); do
+            V=${TAG#v}
+            if [ "$V" != "$VER" ] && [ "$(printf '%s\n%s\n' "$VER" "$V" | sort -V | tail -1)" = "$V" ]; then
+              echo "Reservando $TAG como borrador"; gh release edit "$TAG" --draft=true
+            fi
+          done
