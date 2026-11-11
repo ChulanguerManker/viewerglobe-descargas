@@ -18,6 +18,7 @@ Un globo que gira en tu directo con la gente de tu chat. Escriben **`!pais Espa�
 - Elige lado de la pantalla, tamaño, posición, inclinación, ángulo, transparencia y velocidad.
 - Lista de quién está en el mapa y de qué país, también como panel dentro de OBS.
 - Botón para añadir el globo a tu escena de OBS automáticamente.
+- Dos modos: **Medio globo** o **Satélite** (globo completo con los nombres orbitando alrededor).
 - También con la **extensión de Twitch**: tus espectadores se apuntan desde el panel de tu canal.
 - Ajuste de **Calidad** y fuente de OBS ajustada al globo para que no pierdas fotogramas.
 - Solo lee el chat: no necesita tu contraseña ni permisos de Twitch.
@@ -31,7 +32,7 @@ Comandos del chat: `!pais <país>` · `!pais quitar`
 
 A spinning globe on your stream with your chat's viewers. They type **`!country Spain`** (or `!pais`) and their pin appears with their name.
 
-13 styles (neon is free, the rest with **ViewerGlobe Pro**, one-time payment), adjustable side, size, position, tilt, angle, transparency and speed, a viewer list (also as an OBS dock) and one-click setup in OBS, a Twitch extension so viewers can join from your panel, and a Quality setting to keep OBS at full frame rate. Read-only chat, no Twitch login needed.
+two modes (half globe or satellite, with names orbiting a full globe), 13 styles (neon is free, the rest with **ViewerGlobe Pro**, one-time payment), adjustable side, size, position, tilt, angle, transparency and speed, a viewer list (also as an OBS dock) and one-click setup in OBS, a Twitch extension so viewers can join from your panel, and a Quality setting to keep OBS at full frame rate. Read-only chat, no Twitch login needed.
 
 ---
 
