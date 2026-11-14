@@ -1,15 +1,14 @@
-ViewerGlobe 1.2.0 · Versión gratis y ViewerGlobe Pro · Free version and ViewerGlobe Pro
+ViewerGlobe 1.3.0 · Nuevo modo Satélite · New Satellite mode
 
-- **Mucho más ligero en OBS**: el brillo neón lo hace la gráfica, el globo va a 30 fps y la fuente de OBS se ajusta sola al tamaño del globo. Nuevo ajuste de **Calidad** (Ligera, Equilibrada, Alta).
-- **Letreros curvos** alrededor del globo, nítidos y con la misma transparencia que el globo.
-- **Extensión de Twitch**: los espectadores pueden apuntarse desde el panel de tu canal y aparecen en el globo.
-- **Gratis**: estilo neón y todo lo demás. **ViewerGlobe Pro** (pago único, 2 PCs): las 13 skins y la opción de quitar los letreros.
+- **Modo Satélite (nuevo, gratis):** globo completo y pequeño con los nombres de tus espectadores orbitando alrededor, con su bandera y una línea hasta su país. Las etiquetas giran con el globo y pasan por detrás. Se elige en *Posición y aspecto → Modo del globo*; el modo de siempre (*Medio globo*) sigue igual.
+- La fuente de OBS se ajusta sola al tamaño del modo elegido.
+- Incluye todo lo de la 1.2.0: ajuste de Calidad, letreros nítidos, extensión de Twitch y ViewerGlobe Pro.
 
 ---
 
-- **Much lighter in OBS**: GPU glow, 30 fps globe and the OBS source resizes itself to fit the globe. New **Quality** setting (Light, Balanced, High).
-- **Curved labels** around the globe, sharp and with the same transparency as the globe.
-- **Twitch extension**: viewers can join from your channel panel and appear on the globe.
-- **Free**: neon style and everything else. **ViewerGlobe Pro** (one-time payment, 2 PCs): all 13 skins and the option to remove the labels.
+- **Satellite mode (new, free):** a small full globe with your viewers' names orbiting around it, with their flag and a line to their country. Labels spin with the globe and pass behind it. Pick it in *Position and look → Globe mode*; the classic *Half globe* mode stays the same.
+- The OBS source resizes itself for the chosen mode.
+- Includes everything from 1.2.0: Quality setting, sharp labels, Twitch extension and ViewerGlobe Pro.
 
-Descarga **ViewerGlobe-Setup-1.2.0.exe** e instálalo. Si Windows muestra un aviso: *Más información → Ejecutar de todas formas*.
+Descarga **ViewerGlobe-Setup-1.3.0.exe** e instálalo encima de la versión anterior. Si Windows muestra un aviso: *Más información → Ejecutar de todas formas*.
+
